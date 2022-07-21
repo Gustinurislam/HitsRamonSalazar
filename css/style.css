@@ -1,0 +1,75 @@
+body {
+     background: url(../img/bg.jpeg);
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+
+h1,
+h2 {
+     font-size: 60px;
+     text-align: center;
+     color:  white;
+     font-family: 'Cinzel';
+     margin: 10px;
+     text-transform: uppercase;
+}
+
+button {
+     display: block;
+     padding: 10px 20px;
+     margin: auto;
+     border: 1px solid #fff;
+     background-color: transparent;
+     cursor: url(../img/knife1.png), auto;
+
+}
+
+button span {
+     color: #fff;
+     font-family: 'Cinzel';
+     text-transform: uppercase;
+}
+
+.container {
+     width: 600px;
+     margin: auto;
+     cursor: url(../img/knife1.png), auto;
+}
+
+.container:active {
+     cursor: url(../img/knife2.png), auto;
+}
+
+.rip {
+     width: 200px;
+     height: 200px;
+     position: relative;
+     overflow: hidden;
+     float: left;
+}
+
+.rip::after {
+     content: '';
+     display: block;
+     width: 200px;
+     height: 200px;
+     background: url(../img/rip.png) bottom center no-repeat;
+     background-size: 80%;
+     position: absolute;
+     bottom: -10px;
+}
+
+.salazar {
+     width: 100%;
+     height: 150%;
+     background: url(../img/salazar.png) bottom center no-repeat;
+     background-size: 70%;
+     position: absolute;
+     top: 150px;
+     transition: top 0.1s;
+}
+
+.rip.rise .salazar {
+     top: -90px;
+     z-index: 1;
+}
